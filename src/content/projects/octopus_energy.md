@@ -2,7 +2,7 @@
 title: Octopus Energy Dashboard
 summary: End-to-end personal energy monitoring pipeline — from API ingestion to Grafana dashboards.
 stack: [Dagster, Python, PostgreSQL, Grafana, GitHub Actions, Docker]
-url: ""
+url: "TBC"
 ---
 
 Built a personal data pipeline to track and visualise energy costs and
