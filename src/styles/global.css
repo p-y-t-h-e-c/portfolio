@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #161618;
+  --color-surface-raised: #1e1e21;
+  --color-surface-overlay: #252528;
+  --color-primary: #eeecea;
+  --color-secondary: #b0aeac;
+  --color-muted: #737270;
+  --color-accent: #6ec6a8;
+  --color-border-subtle: rgba(255, 255, 255, 0.10);
+  --color-border: rgba(255, 255, 255, 0.20);
+
+  --font-family-sans: 'IBM Plex Sans', sans-serif;
+  --font-family-mono: 'IBM Plex Mono', monospace;
+}
+
+html {
+  scroll-padding-top: 80px;
+}

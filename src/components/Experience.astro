@@ -1,0 +1,47 @@
+---
+import { getCollection, render } from 'astro:content';
+
+const entries = await getCollection('experience');
+
+// Sort so current role appears first, then by period descending
+entries.sort((a, b) => {
+  if (a.data.current) return -1;
+  if (b.data.current) return 1;
+  return b.data.period.localeCompare(a.data.period);
+});
+---
+
+<section id="experience" class="border-t border-border-subtle">
+  <div class="max-w-3xl mx-auto px-6 md:px-14 py-16">
+    <p class="font-mono text-xs text-muted tracking-widest uppercase mb-10">Experience</p>
+
+    <div class="flex flex-col gap-12">
+      {entries.map(async (entry) => {
+        const { Content } = await render(entry);
+        return (
+          <div class="grid grid-cols-[120px_1fr] gap-8">
+            <span class="font-mono text-xs text-muted leading-relaxed pt-1">
+              {entry.data.period}
+            </span>
+            <div>
+              <p class="text-primary font-normal mb-1">{entry.data.role}</p>
+              <p class="font-mono text-xs text-accent mb-4">{entry.data.company}</p>
+              <div class="text-secondary text-sm leading-relaxed mb-4 prose prose-invert
+                          prose-p:text-secondary prose-p:text-sm">
+                <Content />
+              </div>
+              <div class="flex flex-wrap gap-2">
+                {entry.data.stack.map(tech => (
+                  <span class="font-mono text-xs text-secondary border border-border
+                                px-2 py-0.5 bg-surface-raised">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

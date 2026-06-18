@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+const entries = await getCollection('certifications');
+entries.sort((a, b) => b.data.year - a.data.year);
+---
+
+<section id="education" class="border-t border-border-subtle">
+  <div class="max-w-3xl mx-auto px-6 md:px-14 py-16">
+    <p class="font-mono text-xs text-muted tracking-widest uppercase mb-10">Education &amp; Certifications</p>
+
+    <div class="flex flex-col gap-8">
+      {entries.map(entry => (
+        <div class="grid grid-cols-[120px_1fr] gap-8">
+          <span class="font-mono text-xs text-muted pt-1">{entry.data.year}</span>
+          <div>
+            <p class="font-mono text-xs text-accent uppercase tracking-widest mb-1">
+              {entry.data.type}
+            </p>
+            <p class="text-primary mb-1">{entry.data.title}</p>
+            <p class="text-secondary text-sm">{entry.data.issuer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

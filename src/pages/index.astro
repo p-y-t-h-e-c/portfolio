@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Experience from '../components/Experience.astro';
+import Projects from '../components/Projects.astro';
+import Education from '../components/Education.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<Base>
+  <Nav />
+  <main>
+    <Hero />
+    <Experience />
+    <Projects />
+    <Education />
+    <Contact />
+  </main>
+  <footer class="border-t border-border-subtle max-w-3xl mx-auto px-6 md:px-14 py-8
+                  flex justify-between font-mono text-xs text-muted">
+    <span>Piotr Koper · Data Engineer</span>
+    <span>2026</span>
+  </footer>
+</Base>

@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+const entries = await getCollection('projects');
+---
+
+<section id="projects" class="border-t border-border-subtle">
+  <div class="max-w-3xl mx-auto px-6 md:px-14 py-16">
+    <p class="font-mono text-xs text-muted tracking-widest uppercase mb-10">Projects</p>
+
+    <div class="flex flex-col divide-y divide-border-subtle">
+      {entries.map(async (entry) => {
+        const { Content } = await render(entry);
+        return (
+          <div class="py-7 grid grid-cols-[1fr_auto] gap-4 items-start
+                      group hover:opacity-80 transition-opacity">
+            <div>
+              <p class="text-primary mb-2">{entry.data.title}</p>
+              <div class="text-secondary text-sm leading-relaxed mb-4
+                          prose prose-invert prose-p:text-secondary prose-p:text-sm">
+                <Content />
+              </div>
+              <div class="flex flex-wrap gap-2">
+                {entry.data.stack.map(tech => (
+                  <span class="font-mono text-xs text-secondary border border-border
+                                px-2 py-0.5 bg-surface-raised">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            {entry.data.url && (
+              <a href={entry.data.url} target="_blank"
+                  class="font-mono text-xs text-muted group-hover:text-accent transition-colors pt-1">
+                ↗
+              </a>
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
