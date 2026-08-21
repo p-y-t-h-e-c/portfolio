@@ -19,7 +19,7 @@ entries.sort((a, b) => {
       {entries.map(async (entry) => {
         const { Content } = await render(entry);
         return (
-          <div class="grid grid-cols-[120px_1fr] gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-1 md:gap-8">
             <span class="font-mono text-xs text-muted leading-relaxed pt-1">
               {entry.data.period}
             </span>
