@@ -1,6 +1,6 @@
 ---
 role: Data Engineering Conversion Course
-company: Academy · Infinity Works
+company: Academy · Infinity Works · Jaguar Land Rover
 period: 2021 — 2022
 current: false
 stack: [Python, SQL, Data Engineering, ETL, ELT]

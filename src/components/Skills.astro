@@ -1,0 +1,51 @@
+---
+const skills = [
+  {
+    category: 'Infrastructure & IaC',
+    items: ['Terraform', 'GCP', 'Docker', 'Kubernetes', 'Helm', 'Artifact Registry', 'Cloud Run', 'Workload Identity Federation'],
+  },
+  {
+    category: 'CI/CD & DevOps',
+    items: ['GitLab CI/CD', 'GitHub Actions', 'GitLab Components', 'Pre-commit', 'Container Scanning', 'Pipeline Templating'],
+  },
+  {
+    category: 'Data Engineering',
+    items: ['Dagster', 'Apache Airflow', 'dbt', 'ETL / ELT', 'Data Modelling', 'Pipeline Architecture'],
+  },
+  {
+    category: 'Languages',
+    items: ['Python', 'SQL', 'Bash', 'HCL', 'YAML'],
+  },
+  {
+    category: 'Databases & Storage',
+    items: ['PostgreSQL', 'GCS', 'BigQuery', 'Cloud SQL'],
+  },
+  {
+    category: 'Observability & Tooling',
+    items: ['Grafana', 'Git', 'Obsidian', 'Linux', 'uv', 'pnpm'],
+  },
+];
+---
+
+<section id="skills" class="border-t border-border-subtle">
+  <div class="max-w-3xl mx-auto px-6 md:px-14 py-16">
+    <p class="font-mono text-xs text-muted tracking-widest uppercase mb-10">Skills & Stack</p>
+
+    <div class="flex flex-col gap-6">
+      {skills.map(group => (
+        <div class="grid grid-cols-[160px_1fr] gap-6 items-start">
+          <span class="font-mono text-xs text-muted pt-1">{group.category}</span>
+          <div class="flex flex-wrap gap-2">
+            {group.items.map(item => (
+              <span class="font-mono text-xs text-secondary border border-border
+                          px-2 py-0.5 bg-surface-raised hover:text-accent
+                          hover:border-accent transition-colors">
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

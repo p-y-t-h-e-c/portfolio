@@ -1,6 +1,6 @@
 ---
 role: Senior Data Engineer
-company: "TBC"
+company: Jaguar Land Rover
 period: 2022 — Present
 current: true
 stack:
