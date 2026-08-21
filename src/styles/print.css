@@ -1,0 +1,124 @@
+@media print {
+  @page {
+    margin: 1.5cm 1.8cm;
+    size: A4;
+  }
+
+  /* ── Hide chrome ── */
+  nav,
+  footer,
+  #hero .flex.gap-4 {
+    display: none !important;
+  }
+
+  /* ── Kill all backgrounds and reset colors ── */
+  html,
+  body,
+  main,
+  section,
+  div,
+  span,
+  p,
+  h1,
+  h2,
+  h3 {
+    background: white !important;
+    background-color: white !important;
+    color: #1a1a1a !important;
+    border-color: #ddd !important;
+  }
+
+  /* ── Body reset ── */
+  body {
+    font-size: 9.5pt !important;
+    line-height: 1.55 !important;
+  }
+
+  /* ── Remove fixed positioning from nav ── */
+  nav {
+    position: static !important;
+  }
+
+  /* ── Hero ── */
+  #hero {
+    min-height: unset !important;
+    height: auto !important;
+    padding: 0 0 0.3cm 0 !important;
+  }
+
+  #hero h1 {
+    font-size: 26pt !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.2cm !important;
+  }
+
+  /* ── Sections ── */
+  section {
+    padding-top: 0.3cm !important;
+    padding-bottom: 0cm !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    break-inside: avoid;
+  }
+
+  /* ── Remove max width so content fills page ── */
+  [class*="max-w-"] {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ── Accent text ── */
+  [class*="text-accent"] {
+    color: #2a7a5e !important;
+  }
+
+  [class*="text-muted"],
+  [class*="text-secondary"] {
+    color: #555 !important;
+  }
+
+  /* ── Tags ── */
+  [class*="border"][class*="font-mono"] {
+    border: 1px solid #ccc !important;
+    color: #444 !important;
+    background: white !important;
+    font-size: 7.5pt !important;
+    padding: 1pt 4pt !important;
+  }
+
+  /* ── Force grids to stay two column ── */
+  [class*="grid"] {
+    display: grid !important;
+  }
+
+  [class*="md:grid-cols-[120px_1fr]"],
+  [class*="grid-cols-[120px_1fr]"] {
+    grid-template-columns: 110px 1fr !important;
+  }
+
+  [class*="md:grid-cols-[160px_1fr]"],
+  [class*="grid-cols-[160px_1fr]"] {
+    grid-template-columns: 150px 1fr !important;
+  }
+
+  [class*="md:grid-cols-[1fr_280px]"],
+  [class*="grid-cols-[1fr_280px]"] {
+    grid-template-columns: 1fr 200px !important;
+    gap: 1cm !important;
+  }
+
+  /* ── Page breaks ── */
+  #hero {
+    break-after: avoid;
+  }
+
+  #about {
+    break-inside: avoid !important;
+  }
+
+  .exp-item,
+  .project-item {
+    break-inside: avoid;
+  }
+}
