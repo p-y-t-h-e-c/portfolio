@@ -3,26 +3,20 @@ role: Senior Data Engineer
 company: Jaguar Land Rover
 period: 2022 — Present
 current: true
-stack:
-  [
-    GCP,
-    Terraform,
-    GitLab CI/CD,
-    Docker,
-    Dagster,
-    Python,
-    PostgreSQL,
-    Cloud Run,
-    Airflow,
-    Snowflake,
-    dbt,
-  ]
+stack: []
 ---
 
-Part of the core Data Engineering platform team, focused on infrastructure,
+Part of the core Data Engineering team, focused on infrastructure,
 developer tooling, and engineering standards across the data organisation.
-Progressed from pipeline development into platform and infrastructure
-engineering, taking on technical leadership across several working groups.
+Progressed from pipeline development and data products into platform and
+infrastructure engineering, taking on technical leadership across several
+working groups.
+
+**Data Pipelines & Products**
+Involved in the design, development and delivery of data pipelines and
+data products across the organisation. Applied Data Contract standards
+to enforce schema validation and detect data anomalies as part of the
+pipeline quality framework.
 
 **CI/CD Working Group — Lead**
 Lead the GitLab custom CI/CD pipelines working group, responsible for
@@ -44,9 +38,8 @@ custom Docker images stored in GCP Artifact Registry, used across data
 engineering pipelines and services.
 
 **Terraform Working Group — Lead**
-Recently took on leadership of the Terraform working group, overseeing
-module standards, provisioning patterns and infrastructure-as-code
-practices across the data platform.
+Lead the Terraform working group, overseeing module standards, provisioning
+patterns and infrastructure-as-code practices across the data platform.
 
 **Notifications System**
 One of the core developers of a GCP-based notifications system that
@@ -61,8 +54,13 @@ Part of the team that designed and provisioned the Kubernetes cluster,
 namespace and Helm module for GitLab runners during a full GitLab instance
 migration — infrastructure managed entirely via Terraform.
 
-**Python Task Orchestrator POC — Lead**
-Led the evaluation of enterprise Python task orchestrators, assessing
-Astronomer and Dagster against defined criteria. Produced a technical
-evaluation report adopted as the recommendation to the Enterprise
-Technology Board — Dagster selected as the preferred platform.
+**Python Task Orchestrator Evaluation — Lead**
+Led a structured technical evaluation of enterprise Python task
+orchestrators across two platforms. The evaluation involved building
+end-to-end data pipelines including data validation, CI/CD integration,
+event-triggered execution, cross-platform authentication, and integrations
+with GCP, dbt, Dataform, and Snowflake. Assessment covered local and
+cloud deployment, developer experience, private package management,
+dependency isolation, and long-term maintainability. Produced a formal
+evaluation report adopted as the technical recommendation to the Enterprise
+Technology Board.
